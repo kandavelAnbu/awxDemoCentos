@@ -1,4 +1,8 @@
-- hosts:
-    - all
+- name: create_directory
+  hosts: all
   tasks:
-    - action: ping
+
+   - name: Creates directory
+     file:
+       path: ~/demo_directory_created_through_awx
+       state: directory
